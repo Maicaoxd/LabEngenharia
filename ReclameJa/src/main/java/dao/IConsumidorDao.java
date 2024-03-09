@@ -5,7 +5,6 @@ import java.util.List;
 import model.Consumidor;
 
 public interface IConsumidorDao {
-	public Consumidor pesquisar(String consumidor);
 
 	public void inserir(Consumidor consumidor);
 
@@ -15,6 +14,8 @@ public interface IConsumidorDao {
 
 	public List<Consumidor> listar();
 
-	public List<Consumidor> apenasUmConsumidor(String CPF);
+	public Consumidor pesquisarCPF(Long cpfConsumidor);
+
+	public List<Consumidor> pesquisarNome(String nomeConsumidor);
 
 }
